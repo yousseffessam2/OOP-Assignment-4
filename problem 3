@@ -1,0 +1,19 @@
+public class Main {
+    public static double average(int a, int b) {
+        return (a + b) / 2.0;
+    }
+    public static double average(int a, int b, int c) {
+        return (a + b + c) / 3.0;
+    }
+    public static double average(double a, double b) {
+        return (a + b) / 2;
+    }
+    public static void main(String[] args) {
+        System.out.println(average(10, 20));
+        System.out.println(average(10, 20, 30));
+        System.out.println(average(10.5, 20.5));
+    }
+    // We cannot declare double average(int x, int y)
+    // because it has the same parameter types as average(int a, int b).
+    // Java does not allow overloading methods by return type alone.
+}
